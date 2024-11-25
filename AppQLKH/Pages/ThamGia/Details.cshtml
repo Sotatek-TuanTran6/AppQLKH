@@ -1,0 +1,37 @@
+﻿@page
+@model AppQLKH.Pages.ThamGia.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Tham_Gia</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Tham_Gia.GiangVien)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Tham_Gia.GiangVien.MaGV)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Tham_Gia.DeTai)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Tham_Gia.DeTai.MaDT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Tham_Gia.SoGio)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Tham_Gia.SoGio)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Tham_Gia.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

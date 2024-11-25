@@ -1,0 +1,48 @@
+﻿@page
+@model AppQLKH.Pages.DeTai.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.De_Tai[0].TenDT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.De_Tai[0].Cap)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.De_Tai[0].KinhPhi)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.De_Tai) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenDT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cap)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KinhPhi)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.MaDT">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.MaDT">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.MaDT">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
