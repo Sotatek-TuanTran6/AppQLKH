@@ -45,7 +45,8 @@ namespace AppQLKH.Pages.GiangVien
                                 join dt in _context.De_Tai on tg.MaDT equals dt.MaDT
                                 where dt.TenDT == "Phân loại văn bản" orderby dt.TenDT == "Dịch tự động Anh Việt"
                                 select gv).ToListAsync();
-            GiangVien3.Select(x => x.HoTen);
+
+            //GiangVien3.Select(x => x.HoTen);
             // select x.Hoten from Giangvien3
         }
     }
