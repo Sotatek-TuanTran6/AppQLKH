@@ -23,3 +23,6 @@ namespace AppQLKH.Models
     }
 }
 
+// Thuộc tính riêng của bảng Tham_gia là số giờ tham gia của giảng viên cho từng dự án.
+//Khóa ngoại đến bảng DeTai, tham chiếu đến thuộc tính MaDT trong bảng DeTai
+//Khóa ngoại đến bảng GiangVien, tham chiếu đến thuộc tính MaGV trong bảng GiangVien
